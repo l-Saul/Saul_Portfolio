@@ -3,7 +3,6 @@
     color: black;
     background-color: whitesmoke;
     margin: 0;
-    margin-top: 10;
     padding: 0;
     flex-grow: 0;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -19,7 +18,6 @@
     left: 0;
     width: 100%;
     background-color: rgba(51, 51, 51, 0.8);
-    padding: 1rem 1rem;
     z-index: 1000;
 }
 
@@ -27,6 +25,7 @@ ul {
     display: flex;
     justify-content: flex-start;
     list-style: none;
+    
 }
 
 .linkmenu a:link, .linkmenu a:visited, .linkmenu a:active {
@@ -47,25 +46,22 @@ ul {
 .contrastheader {
     background-color: #333;
     color: whitesmoke;
-    padding: 50px;
-    padding-bottom: 60px;
+    padding: 5rem;
+    padding-bottom: 6rem;
 }
 
 .textjustify {
-    max-width: 900px;
+    max-width: 70rem;
     margin: auto;
     text-align: justify;
     line-height: 1.2;
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-top: 1px;
-    padding-bottom: 10px;
+    padding: 0 1% 1rem;
 }
 
 .texttitle {
     padding-top: 30px;
     text-align: center;
-    font-size:500%;
+    font-size: 5rem;
 }
 
 /* Ajusta Titulo do Portfólio*/
@@ -137,4 +133,96 @@ img {
     color: whitesmoke;
     padding: 5px;
     margin-top: 20px;
+}
+
+/* Ajuste do texto das imagens */
+.imgjustify {
+    max-width: 600px;
+    margin: auto;
+    text-align: justify;
+    line-height: 1.2;
+    padding: 1% 1% 10px;
+}
+
+/* Ajuste de footer */
+.contrastfooter {
+    background-color: #333;
+    color: whitesmoke;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+/* Media Queries para dispositivos móveis */
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+
+    /* Ajusta o header para ficar mais compacto */
+    .contrastheader {
+        padding: 2rem;
+    }
+
+    /* Ajusta a fonte do título principal */
+    .texttitle {
+        font-size: 3rem;
+    }
+
+    /* Ajuste do menu para empilhar verticalmente */
+    .menuorder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .linkmenu {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    /* Ajuste dos itens do projeto */
+    .container {
+        flex-direction: column; /* Torna a coluna flexível */
+    }
+
+    .left-side, .right-side {
+        padding: 10px;
+    }
+
+    img {
+        width: 100%; /* A imagem vai ocupar a largura total disponível */
+        height: auto; /* A altura se ajusta automaticamente */
+    }
+
+    h3 {
+        font-size: 2.5rem; /* Reduz o tamanho do título */
+    }
+
+    /* Ajustes do footer */
+    .contrastfooter {
+        padding: 2rem;
+    }
+}
+
+/* Para telas menores que 480px (smartphones muito pequenos) */
+@media (max-width: 480px) {
+    .texttitle {
+        font-size: 2.5rem;
+    }
+
+    .contrastheader {
+        padding: 1rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .imgjustify {
+        max-width: 90%; /* Ajusta o tamanho do texto das imagens */
+    }
+
+    img {
+        width: 100%;
+    }
 }
